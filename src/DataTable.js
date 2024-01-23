@@ -1,13 +1,14 @@
-// DataTable.js
+
 
 import React, { useState } from 'react';
 import { Table, Button, Modal, Form, Alert } from 'react-bootstrap';
 
+
+
 const DataTable = () => {
   const [showModal, setShowModal] = useState(false);
   const [data, setData] = useState([
-    // { id: 1, name: 'John Doe', gender: 'Male', age: 25, class: 'I' },
-    // { id: 2, name: 'Jane Doe', gender: 'Female', age: 28, class: 'II' },
+    // { id: 1, name: 'John Doe', gender: 'Male', age: 25, class: 'I' }
     // // Add more initial data or fetch data from APIs
   ]);
 
@@ -63,9 +64,11 @@ const DataTable = () => {
 
   return (
     <div>
-      <Button variant="primary" onClick={handleShow}>
-        Add Row
+     <div className='d-flex align-item-center justify-content-center'>
+     <Button variant="primary" onClick={handleShow}>
+        Add Row 
       </Button>
+     </div>
 
       <Table striped bordered hover responsive>
         <thead>
