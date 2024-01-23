@@ -6,9 +6,9 @@ import { Table, Button, Modal, Form, Alert } from 'react-bootstrap';
 const DataTable = () => {
   const [showModal, setShowModal] = useState(false);
   const [data, setData] = useState([
-    { id: 1, name: 'John Doe', gender: 'Male', age: 25, class: 'I' },
-    { id: 2, name: 'Jane Doe', gender: 'Female', age: 28, class: 'II' },
-    // Add more initial data or fetch data from APIs
+    // { id: 1, name: 'John Doe', gender: 'Male', age: 25, class: 'I' },
+    // { id: 2, name: 'Jane Doe', gender: 'Female', age: 28, class: 'II' },
+    // // Add more initial data or fetch data from APIs
   ]);
 
   const [formData, setFormData] = useState({
@@ -116,17 +116,20 @@ const DataTable = () => {
             <Form.Group controlId="formGender">
               <Form.Label>Gender</Form.Label>
               <Form.Control
-                type="text"
-                placeholder="Enter Gender"
+                as="select"
                 name="gender"
                 value={formData.gender}
                 onChange={handleInputChange}
-              />
+              >
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </Form.Control>
             </Form.Group>
             <Form.Group controlId="formAge">
               <Form.Label>Age</Form.Label>
               <Form.Control
-                type="text"
+                type="number"
                 placeholder="Enter Age"
                 name="age"
                 value={formData.age}
