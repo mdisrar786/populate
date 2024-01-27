@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Table, Button, Modal, Form, Alert } from 'react-bootstrap';
+import AddIcon from '@mui/icons-material/Add';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 
 
@@ -7,7 +9,7 @@ import { Table, Button, Modal, Form, Alert } from 'react-bootstrap';
 const DataTable = () => {
   const [showModal, setShowModal] = useState(false);
   const [data, setData] = useState([
-    { id: 1, name: 'Example1', gender: 'Male', age: 25, class: 'I' }
+    { id: 1, name: 'Md Israr Ahmed', gender: 'Male', age: 25, class: 'frontend developer' }
     // // Add more initial data or fetch data from APIs
   ]);
 
@@ -65,7 +67,7 @@ const DataTable = () => {
     <div>
      <div className='d-flex align-item-center justify-content-center'>
      <Button variant="success" onClick={handleShow}>
-        Add Row 
+        Add Row <AddIcon/>
       </Button>
      </div>
 
@@ -90,7 +92,7 @@ const DataTable = () => {
               <td>{row.class}</td>
               <td>
                 <Button variant="danger" onClick={() => handleDeleteRow(row.id)}>
-                  Delete 
+                  Delete <DeleteIcon/>
                 </Button>
               </td>
             </tr>

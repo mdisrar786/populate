@@ -1,7 +1,8 @@
-*{
-  background-color: azure;
-}
 
 .App {
   text-align: center;
+}
+
+body{
+  background-color: aquamarine;
 }
