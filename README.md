@@ -17,7 +17,8 @@ You may also see any lint errors in the console.
 ### `clone the Project on below link`
 
 Github Link 👇
-Open [https://github.com/mdisrar786/populate] and run the Command npm install
+Open [https://github.com/mdisrar786/populate] after clone just
+**Note: Once you clone and then run and install all dependencies `npm install`**
 
 ### `npm run build`
 
