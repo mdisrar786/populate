@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Table, Button, Modal, Form, Alert } from 'react-bootstrap';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
+import CloseIcon from '@mui/icons-material/Close';
 
 
 
@@ -9,8 +10,8 @@ import DeleteIcon from '@mui/icons-material/Delete';
 const DataTable = () => {
   const [showModal, setShowModal] = useState(false);
   const [data, setData] = useState([
-    { id: 1, name: 'Md Israr Ahmed', gender: 'Male', age: 25, class: 'frontend developer' }
-    // // Add more initial data or fetch data from APIs
+    { id: 1, name: 'Md Israr Ahmed', gender: 'Male', age: 25, class: 'IV' }
+    
   ]);
 
   const [formData, setFormData] = useState({
@@ -44,7 +45,7 @@ const DataTable = () => {
   };
 
   const handleAddRow = () => {
-    // Validate form fields
+    // Validate form input fields
     if (!formData.name || !formData.gender || !formData.age || !formData.class) {
       setValidationError('All fields are required.');
       return;
@@ -65,7 +66,7 @@ const DataTable = () => {
 
   return (
     <div>
-     <div className='d-flex align-item-center justify-content-center'>
+     <div className='d-flex align-item-center justify-content-center my-2'>
      <Button variant="success" onClick={handleShow}>
         Add Row <AddIcon/>
       </Button>
@@ -160,10 +161,10 @@ const DataTable = () => {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Close <CloseIcon />
           </Button>
           <Button variant="primary" onClick={handleAddRow}>
-            Add Row
+            Add Row <AddIcon/>
           </Button>
         </Modal.Footer>
       </Modal>
