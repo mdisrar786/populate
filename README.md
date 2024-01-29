@@ -14,6 +14,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+### `clone the Project on below link`
+
+Github Link 👇
+Open [https://github.com/mdisrar786/populate]
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
